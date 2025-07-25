@@ -21,7 +21,7 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 model = torchvision.models.resnet50(pretrained=False)
 model.fc = nn.Linear(2048, 2)
-model.load_state_dict(torch.load("models/smoking_alcohol_model3.pt", map_location=torch.device('cpu')))
+model.load_state_dict(torch.load("models/smoking_alcohol_model3.pt", map_location=torch.device('cpu'))) #download model from link txt file and then upload in models folder and then u good to go
 model.eval()
 
 with open("models/svm_abuse_model.pkl", "rb") as f: #less accurate model trained by me ignore it and use the abuse_language moel trained on bert with high accuracy
@@ -31,7 +31,7 @@ with open("models/tfidf_vectorizer.pkl", "rb") as f:
 
 whisper_model = whisper.load_model("base")
 
-model_dir = "https://drive.google.com/drive/folders/1Gw7YI-H-vnA_Y03WP7eM0hThOSORqoyX?usp=sharing"
+model_dir = "https://drive.google.com/drive/folders/1Gw7YI-H-vnA_Y03WP7eM0hThOSORqoyX?usp=sharing" # Replace with the actual path to your model directory like models/abuse_language
 
 tokenizer = AutoTokenizer.from_pretrained(model_dir)
 abuse_model = AutoModelForSequenceClassification.from_pretrained(model_dir, local_files_only=True)
