@@ -1,0 +1,2 @@
+abuse model = "https://drive.google.com/drive/folders/1Gw7YI-H-vnA_Y03WP7eM0hThOSORqoyX?usp=sharing"
+smoking alcohol detector model = "https://drive.google.com/file/d/1YQRWXQyk7myILQZWIYexqNkowb2gUMwx/view?usp=sharing"
